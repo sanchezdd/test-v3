@@ -1,0 +1,45 @@
+.region-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+  background-color: #777777;
+  margin-top: 100px;
+}
+
+.block-4 span {
+  color: #ffffff;
+}
+
+.block-5 ul {
+  list-style: none;
+}
+
+.block-5 ul li a {
+  color: #ffffff;
+}
+
+.block-6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.block-6 img {
+  width: 50px;
+  height: 50px;
+}
+
+.block-6 span {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.block-6 a {
+  color: #ffffff;
+}

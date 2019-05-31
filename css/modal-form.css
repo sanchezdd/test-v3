@@ -1,0 +1,111 @@
+.modalWindow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalWindow:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalWindow > div {
+  width: 400px;
+  min-height: 500px;
+  position: fixed;
+  margin: 10% auto;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background: #ffffff;
+}
+
+.ok, .close, .cancel {
+  background: #777777;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+}
+
+.ok, .cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -30px;
+  margin-right: -30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+form h2, label {
+  text-align: center;
+  color: #777777;
+}
+
+fieldset {
+  border: unset;
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+fieldset:last-child {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input, textarea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+  padding: 10px 0px;
+}
+
+textarea {
+  padding: 40px 0px;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background: #777777;
+  color: #ffffff;
+  border: unset;
+  padding: 15px;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/modal-form.css">
+  <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+</head>
+<body>
+  <div class="region region-header">
+    <div class="header block-1">
+      <img src="img/1.jpeg" width="100%" height="100%" alt="image-1">
+      <span>
+        <h2>Название компании</h2>
+        <p>самая клевая компания</p>
+      </span>
+    </div>
+    <div class="header block-2">
+      <a class="phone" href="tel:+74997777777">+7 (499) 777-77-77</a>
+      <a class="phone" href="tel:+74997777777">+7 (499) 777-77-77</a>
+      <a class="feedback" href="#openModal">Обратная связь</a>
+    </div>
+  </div>
+  <div class="region region-menu">
+    <div class="menu block-3">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Прайс-лист</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slider Structure -->
+  <div class="slideshow-container block-4">
+    <div class="mySlides fade">
+      <img src="img/slide-1.jpeg" style="width:100%" alt="slider-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="img/slide-2.jpg" style="width:100%" alt="slider-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="img/slide-3.jpg" style="width:100%" alt="slider-image">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- Slider Init -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+  <div class="region region-breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Бытовая техника</a></li>
+    </ul>
+  </div>
+  <div class="region region-content">
+    <div class="column column-left-sidebar">
+      <ul>
+        <li><a href="#">Автомобили</a></li>
+        <li><a href="#">Бытовая техника</a>
+          <ul class="tech">
+            <li><a href="#">Микроволновки</a></li>
+            <li><a href="#">Холодильники</a></li>
+            <li><a href="#">Посудомоечные машины</a></li>
+            <li><a href="#">Чайники</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Мобильная техника</a></li>
+        <li><a href="#">Компьютеры</a></li>
+        <li><a href="#">Одежда</a></li>
+        <li><a href="#">Недвижемость</a></li>
+      </ul>
+    </div>
+    <div class="column column-middle">
+      <div class="item">
+        <div class="item-image">
+          <img src="img/4.jpeg" width="100%" height="100%" alt="product-photo">
+        </div>
+        <div class="item-text">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec consequat ex vitae metus vehicula, porta molestie libero egestas.
+            Sed gravida, elit et porta efficitur, augue tellus tempor massa, in iaculis diam dolor ut felis.
+          </span>
+        </div>
+        <div class="item-footer">
+          <div class="item-price">
+            <p>1 900 р.</p>
+          </div>
+          <div class="item-bucket">
+            <img src="img/5.png" width="100%" height="100%" alt="product-bucket">
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="img/4.jpeg" width="100%" height="100%" alt="product-photo">
+        </div>
+        <div class="item-text">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec consequat ex vitae metus vehicula, porta molestie libero egestas.
+            Sed gravida, elit et porta efficitur, augue tellus tempor massa, in iaculis diam dolor ut felis.
+          </span>
+        </div>
+        <div class="item-footer">
+          <div class="item-price">
+            <p>1 900 р.</p>
+          </div>
+          <div class="item-bucket">
+            <img src="img/5.png" width="100%" height="100%" alt="product-bucket">
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="img/4.jpeg" width="100%" height="100%" alt="product-photo">
+        </div>
+        <div class="item-text">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec consequat ex vitae metus vehicula, porta molestie libero egestas.
+            Sed gravida, elit et porta efficitur, augue tellus tempor massa, in iaculis diam dolor ut felis.
+          </span>
+        </div>
+        <div class="item-footer">
+          <div class="item-price">
+            <p>1 900 р.</p>
+          </div>
+          <div class="item-bucket">
+            <img src="img/5.png" width="100%" height="100%" alt="product-bucket">
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="img/4.jpeg" width="100%" height="100%" alt="product-photo">
+        </div>
+        <div class="item-text">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec consequat ex vitae metus vehicula, porta molestie libero egestas.
+            Sed gravida, elit et porta efficitur, augue tellus tempor massa, in iaculis diam dolor ut felis.
+          </span>
+        </div>
+        <div class="item-footer">
+          <div class="item-price">
+            <p>1 900 р.</p>
+          </div>
+          <div class="item-bucket">
+            <img src="img/5.png" width="100%" height="100%" alt="product-bucket">
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="img/4.jpeg" width="100%" height="100%" alt="product-photo">
+        </div>
+        <div class="item-text">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec consequat ex vitae metus vehicula, porta molestie libero egestas.
+            Sed gravida, elit et porta efficitur, augue tellus tempor massa, in iaculis diam dolor ut felis.
+          </span>
+        </div>
+        <div class="item-footer">
+          <div class="item-price">
+            <p>1 900 р.</p>
+          </div>
+          <div class="item-bucket">
+            <img src="img/5.png" width="100%" height="100%" alt="product-bucket">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="region region-footer">
+    <div class="footer block-4">
+      <span>
+        <p>&copy; 2012-2013 ЗАО "Компания"</p>
+        <p>info@name.ru</p>
+      </span>
+    </div>
+    <div class="footer block-5">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Прайс-лист</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer block-6">
+      <img src="img/1.jpeg" width="100%" height="100%" alt="block-6">
+      <span><a href="#">Розроботка сайта</a> - компания "Пиксель Плюс"</span>
+    </div>
+  </div>
+  <div id="openModal" class="modalWindow">
+    <div>
+    <form id="feedback" action="" method="post">
+      <h2>Обратная связь</h2>
+      <a href="#ok" title="Ok" class="ok">X</a>
+      <fieldset>
+        <label for="name">Ваше имя</label>
+        <input id="name" type="text" tabindex="1" required>
+      </fieldset>
+      <fieldset>
+        <label for="phone">Телефон</label>
+        <input id="phone" type="tel" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <label for="email">Email</label>
+        <input id="email" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <label for="text-area">Сообщение</label>
+        <textarea id="textarea" tabindex="5"></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="feedback-submit" data-submit="Sending">Отправить</button>
+      </fieldset>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
